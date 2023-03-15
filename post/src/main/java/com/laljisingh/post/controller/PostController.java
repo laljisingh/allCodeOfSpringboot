@@ -28,4 +28,9 @@ public class PostController {
         postService.deletePost(id);
         return "deleted";
     }
+    @PutMapping("/update-post/{id}")
+    public ResponseEntity<String> updatePost(@PathVariable Integer id, @RequestBody Post newPost){
+        Post post = postService.updatePost(id, newPost);
+        return new ResponseEntity<String>("Updated"+post, HttpStatus.OK);
+    }
 }

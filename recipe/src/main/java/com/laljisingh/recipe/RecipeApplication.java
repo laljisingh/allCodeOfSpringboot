@@ -1,13 +1,13 @@
-package com.laljisingh.post;
-
+package com.laljisingh.recipe;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PostApplication {
+public class RecipeApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PostApplication.class, args);
+		SpringApplication.run(RecipeApplication.class, args);
 	}
+
 }

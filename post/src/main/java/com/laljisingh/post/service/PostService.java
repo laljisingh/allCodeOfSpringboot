@@ -23,4 +23,12 @@ public class PostService {
     public void deletePost(Integer id) {
         postRepository.deleteById(id);
     }
+
+    public Post updatePost(Integer id, Post newPost) {
+        Post oldpost = postRepository.findById(id).get();
+        oldpost.setDescription(newPost.getDescription());
+        oldpost.setTitle(newPost.getTitle());
+        Post save = postRepository.save(oldpost);
+        return save;
+    }
 }
